@@ -1,3 +1,49 @@
+/* ── Photo Slider ── */
+(function () {
+  const track = document.getElementById('sliderTrack');
+  const dots = document.querySelectorAll('.slider__dot');
+  const total = dots.length;
+  let current = 0;
+  let timer;
+
+  function goTo(index) {
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  function startAuto() { timer = setInterval(next, 4500); }
+  function stopAuto()  { clearInterval(timer); }
+
+  document.getElementById('sliderNext').addEventListener('click', () => { stopAuto(); next(); startAuto(); });
+  document.getElementById('sliderPrev').addEventListener('click', () => { stopAuto(); prev(); startAuto(); });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      stopAuto();
+      goTo(Number(dot.dataset.index));
+      startAuto();
+    });
+  });
+
+  /* Touch/swipe support */
+  let touchStartX = 0;
+  const slider = document.getElementById('slider');
+  slider.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  slider.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) { stopAuto(); diff > 0 ? next() : prev(); startAuto(); }
+  }, { passive: true });
+
+  slider.addEventListener('mouseenter', stopAuto);
+  slider.addEventListener('mouseleave', startAuto);
+
+  startAuto();
+})();
+
 /* ── Nav scroll effect ── */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {

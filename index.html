@@ -50,6 +50,48 @@
     <div class="hero__scroll"><span></span></div>
   </section>
 
+  <!-- GALLERY SLIDER -->
+  <section class="gallery" id="gallery">
+    <div class="slider" id="slider">
+      <div class="slider__track" id="sliderTrack">
+        <div class="slider__slide">
+          <img src="https://agbarber.gr/wp-content/uploads/2021/09/IMG_8053.jpeg" alt="AG Barber – 1" loading="lazy" />
+        </div>
+        <div class="slider__slide">
+          <img src="https://agbarber.gr/wp-content/uploads/2021/09/IMG_7584.jpg" alt="AG Barber – 2" loading="lazy" />
+        </div>
+        <div class="slider__slide">
+          <img src="https://agbarber.gr/wp-content/uploads/2021/09/IMG_6877.jpg" alt="AG Barber – 3" loading="lazy" />
+        </div>
+        <div class="slider__slide">
+          <img src="https://agbarber.gr/wp-content/uploads/2020/11/IMG_6874.jpeg" alt="AG Barber – 4" loading="lazy" />
+        </div>
+        <div class="slider__slide">
+          <img src="https://agbarber.gr/wp-content/uploads/2020/11/IMG_5731.jpeg" alt="AG Barber – 5" loading="lazy" />
+        </div>
+        <div class="slider__slide">
+          <img src="https://agbarber.gr/wp-content/uploads/2021/09/IMG_7776-scaled.jpg" alt="AG Barber – 6" loading="lazy" />
+        </div>
+      </div>
+
+      <button class="slider__btn slider__btn--prev" id="sliderPrev" aria-label="Προηγούμενο">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="slider__btn slider__btn--next" id="sliderNext" aria-label="Επόμενο">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+
+      <div class="slider__dots" id="sliderDots">
+        <button class="slider__dot active" data-index="0" aria-label="Φωτογραφία 1"></button>
+        <button class="slider__dot" data-index="1" aria-label="Φωτογραφία 2"></button>
+        <button class="slider__dot" data-index="2" aria-label="Φωτογραφία 3"></button>
+        <button class="slider__dot" data-index="3" aria-label="Φωτογραφία 4"></button>
+        <button class="slider__dot" data-index="4" aria-label="Φωτογραφία 5"></button>
+        <button class="slider__dot" data-index="5" aria-label="Φωτογραφία 6"></button>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section class="about section" id="about">
     <div class="container">
@@ -303,32 +345,34 @@
       <p class="section__label center">Τοποθεσία</p>
       <h2 class="section__title center">Βρείτε μας.</h2>
     </div>
-    <div class="location__map-wrap">
-      <iframe
-        class="location__map"
-        src="https://maps.google.com/maps?q=Δαμασκηνού+10,+Κόρινθος,+Greece&z=16&output=embed"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="AG Barber – Δαμασκηνού 10, Κόρινθος"
-      ></iframe>
-      <div class="location__card">
-        <div class="location__card-row">
-          <span class="location__card-icon">📍</span>
+
+    <iframe
+      class="location__map"
+      src="https://maps.google.com/maps?q=Δαμασκηνού+10,+Κόρινθος,+Greece&z=16&output=embed"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="AG Barber – Δαμασκηνού 10, Κόρινθος"
+    ></iframe>
+
+    <div class="container">
+      <div class="location__info">
+        <div class="location__info-item">
+          <span class="location__info-icon">📍</span>
           <div>
             <strong>Διεύθυνση</strong>
             <p>Δαμασκηνού 10, Κόρινθος</p>
           </div>
         </div>
-        <div class="location__card-row">
-          <span class="location__card-icon">📞</span>
+        <div class="location__info-item">
+          <span class="location__info-icon">📞</span>
           <div>
             <strong>Τηλέφωνο</strong>
             <p><a href="tel:+302741400498">2741 400498</a></p>
           </div>
         </div>
-        <div class="location__card-row">
-          <span class="location__card-icon">🕐</span>
+        <div class="location__info-item">
+          <span class="location__info-icon">🕐</span>
           <div>
             <strong>Ωράριο</strong>
             <p>Τρίτη – Σάββατο: 11:00 – 19:00</p>
@@ -339,8 +383,7 @@
           href="https://www.google.com/maps/dir/?api=1&destination=Δαμασκηνού+10,+Κόρινθος,+Greece"
           target="_blank"
           rel="noopener"
-          class="btn btn--gold btn--full"
-          style="margin-top:8px"
+          class="btn btn--gold"
         >Οδηγίες Google Maps</a>
       </div>
     </div>
