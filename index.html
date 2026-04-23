@@ -50,45 +50,51 @@
     <div class="hero__scroll"><span></span></div>
   </section>
 
-  <!-- GALLERY SLIDER -->
-  <section class="gallery" id="gallery">
-    <div class="slider" id="slider">
-      <div class="slider__track" id="sliderTrack">
-        <div class="slider__slide">
-          <img src="https://agbarber.gr/wp-content/uploads/2021/09/IMG_8053.jpeg" alt="AG Barber – 1" loading="lazy" />
-        </div>
-        <div class="slider__slide">
-          <img src="https://agbarber.gr/wp-content/uploads/2021/09/IMG_7584.jpg" alt="AG Barber – 2" loading="lazy" />
-        </div>
-        <div class="slider__slide">
-          <img src="https://agbarber.gr/wp-content/uploads/2021/09/IMG_6877.jpg" alt="AG Barber – 3" loading="lazy" />
-        </div>
-        <div class="slider__slide">
-          <img src="https://agbarber.gr/wp-content/uploads/2020/11/IMG_6874.jpeg" alt="AG Barber – 4" loading="lazy" />
-        </div>
-        <div class="slider__slide">
-          <img src="https://agbarber.gr/wp-content/uploads/2020/11/IMG_5731.jpeg" alt="AG Barber – 5" loading="lazy" />
-        </div>
-        <div class="slider__slide">
-          <img src="https://agbarber.gr/wp-content/uploads/2021/09/IMG_7776-scaled.jpg" alt="AG Barber – 6" loading="lazy" />
-        </div>
+  <!-- GALLERY -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <p class="section__label center">Οι δουλειές μας</p>
+      <h2 class="section__title center">Αποτελέσματα που μιλούν.</h2>
+    </div>
+    <div class="gallery__grid">
+      <div class="gallery__item" tabindex="0">
+        <img src="https://agbarber.gr/wp-content/uploads/2021/09/IMG_8053.jpeg" alt="AG Barber – κούρεμα 1" loading="lazy" />
+        <div class="gallery__overlay"><span>+</span></div>
       </div>
+      <div class="gallery__item" tabindex="0">
+        <img src="https://agbarber.gr/wp-content/uploads/2021/09/IMG_7584.jpg" alt="AG Barber – κούρεμα 2" loading="lazy" />
+        <div class="gallery__overlay"><span>+</span></div>
+      </div>
+      <div class="gallery__item" tabindex="0">
+        <img src="https://agbarber.gr/wp-content/uploads/2021/09/IMG_6877.jpg" alt="AG Barber – κούρεμα 3" loading="lazy" />
+        <div class="gallery__overlay"><span>+</span></div>
+      </div>
+      <div class="gallery__item" tabindex="0">
+        <img src="https://agbarber.gr/wp-content/uploads/2020/11/IMG_6874.jpeg" alt="AG Barber – κούρεμα 4" loading="lazy" />
+        <div class="gallery__overlay"><span>+</span></div>
+      </div>
+      <div class="gallery__item" tabindex="0">
+        <img src="https://agbarber.gr/wp-content/uploads/2020/11/IMG_5731.jpeg" alt="AG Barber – κούρεμα 5" loading="lazy" />
+        <div class="gallery__overlay"><span>+</span></div>
+      </div>
+      <div class="gallery__item" tabindex="0">
+        <img src="https://agbarber.gr/wp-content/uploads/2021/09/IMG_7776-scaled.jpg" alt="AG Barber – κούρεμα 6" loading="lazy" />
+        <div class="gallery__overlay"><span>+</span></div>
+      </div>
+    </div>
 
-      <button class="slider__btn slider__btn--prev" id="sliderPrev" aria-label="Προηγούμενο">
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Φωτογραφία">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Κλείσιμο">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <button class="lightbox__btn lightbox__btn--prev" id="lightboxPrev" aria-label="Προηγούμενο">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
       </button>
-      <button class="slider__btn slider__btn--next" id="sliderNext" aria-label="Επόμενο">
+      <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+      <button class="lightbox__btn lightbox__btn--next" id="lightboxNext" aria-label="Επόμενο">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
       </button>
-
-      <div class="slider__dots" id="sliderDots">
-        <button class="slider__dot active" data-index="0" aria-label="Φωτογραφία 1"></button>
-        <button class="slider__dot" data-index="1" aria-label="Φωτογραφία 2"></button>
-        <button class="slider__dot" data-index="2" aria-label="Φωτογραφία 3"></button>
-        <button class="slider__dot" data-index="3" aria-label="Φωτογραφία 4"></button>
-        <button class="slider__dot" data-index="4" aria-label="Φωτογραφία 5"></button>
-        <button class="slider__dot" data-index="5" aria-label="Φωτογραφία 6"></button>
-      </div>
     </div>
   </section>
 

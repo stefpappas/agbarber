@@ -1,47 +1,55 @@
-/* ── Photo Slider ── */
+/* ── Gallery Lightbox ── */
 (function () {
-  const track = document.getElementById('sliderTrack');
-  const dots = document.querySelectorAll('.slider__dot');
-  const total = dots.length;
+  const items   = Array.from(document.querySelectorAll('.gallery__item'));
+  const lightbox = document.getElementById('lightbox');
+  const lbImg    = document.getElementById('lightboxImg');
+  const lbClose  = document.getElementById('lightboxClose');
+  const lbPrev   = document.getElementById('lightboxPrev');
+  const lbNext   = document.getElementById('lightboxNext');
   let current = 0;
-  let timer;
 
-  function goTo(index) {
-    current = (index + total) % total;
-    track.style.transform = `translateX(-${current * 100}%)`;
-    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  function open(index) {
+    current = index;
+    const img = items[current].querySelector('img');
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
   }
 
-  function next() { goTo(current + 1); }
-  function prev() { goTo(current - 1); }
+  function close() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
 
-  function startAuto() { timer = setInterval(next, 4500); }
-  function stopAuto()  { clearInterval(timer); }
+  function prev() { open((current - 1 + items.length) % items.length); }
+  function next() { open((current + 1) % items.length); }
 
-  document.getElementById('sliderNext').addEventListener('click', () => { stopAuto(); next(); startAuto(); });
-  document.getElementById('sliderPrev').addEventListener('click', () => { stopAuto(); prev(); startAuto(); });
-
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      stopAuto();
-      goTo(Number(dot.dataset.index));
-      startAuto();
-    });
+  items.forEach((item, i) => {
+    item.addEventListener('click', () => open(i));
+    item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') open(i); });
   });
 
-  /* Touch/swipe support */
-  let touchStartX = 0;
-  const slider = document.getElementById('slider');
-  slider.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-  slider.addEventListener('touchend', e => {
-    const diff = touchStartX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) { stopAuto(); diff > 0 ? next() : prev(); startAuto(); }
+  lbClose.addEventListener('click', close);
+  lbPrev.addEventListener('click', prev);
+  lbNext.addEventListener('click', next);
+
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
+
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'ArrowLeft')  prev();
+    if (e.key === 'ArrowRight') next();
+    if (e.key === 'Escape')     close();
+  });
+
+  /* Touch swipe inside lightbox */
+  let touchX = 0;
+  lightbox.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+  lightbox.addEventListener('touchend', e => {
+    const diff = touchX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) diff > 0 ? next() : prev();
   }, { passive: true });
-
-  slider.addEventListener('mouseenter', stopAuto);
-  slider.addEventListener('mouseleave', startAuto);
-
-  startAuto();
 })();
 
 /* ── Nav scroll effect ── */
