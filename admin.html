@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AG Barber – Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <div class="login-logo">AG<span>BARBER</span></div>
+      <p class="login-sub">Admin Panel</p>
+      <form id="loginForm" novalidate>
+        <div class="login-field">
+          <label for="password">Κωδικός</label>
+          <input type="password" id="password" placeholder="••••••••" autocomplete="current-password" required />
+        </div>
+        <div class="login-error" id="loginError">Λάθος κωδικός. Δοκιμάστε ξανά.</div>
+        <button type="submit" class="login-btn">Είσοδος</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard hidden" id="dashboard">
+
+    <header class="adm-header">
+      <div class="adm-header__inner">
+        <a href="index.html" class="adm-logo">AG<span>BARBER</span></a>
+        <span class="adm-header__title">Admin Panel</span>
+        <button class="adm-logout" id="logout">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          Αποσύνδεση
+        </button>
+      </div>
+    </header>
+
+    <main class="adm-main">
+
+      <!-- Stats -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="stat-card__label">Σήμερα</span>
+          <strong class="stat-card__val" id="statToday">–</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__label">Εβδομάδα</span>
+          <strong class="stat-card__val" id="statWeek">–</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__label">Alex</span>
+          <strong class="stat-card__val" id="statAlex">–</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__label">Francesco</span>
+          <strong class="stat-card__val" id="statFrancesco">–</strong>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="filter-bar">
+        <div class="filter-group">
+          <button class="filter-btn active" data-period="today">Σήμερα</button>
+          <button class="filter-btn" data-period="week">Εβδομάδα</button>
+          <button class="filter-btn" data-period="all">Όλες</button>
+        </div>
+        <div class="filter-group">
+          <button class="filter-btn active" data-barber="all">Όλοι</button>
+          <button class="filter-btn" data-barber="Alex">Alex</button>
+          <button class="filter-btn" data-barber="Francesco">Francesco</button>
+        </div>
+      </div>
+
+      <!-- Bookings list -->
+      <div id="bookingsList" class="bookings-list">
+        <div class="empty-state" id="emptyState">
+          <p>Δεν υπάρχουν κρατήσεις για την επιλεγμένη περίοδο.</p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
