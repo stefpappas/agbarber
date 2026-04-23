@@ -344,78 +344,81 @@ body {
   margin-top: -12px;
 }
 
-.services__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  align-items: start;
-}
-
-.service-card {
-  background: var(--dark-3);
-  border: 1px solid var(--border);
+/* Price table */
+.price-table-wrap {
+  overflow-x: auto;
   border-radius: var(--radius-lg);
-  padding: 36px 28px;
-  position: relative;
-  transition: border-color var(--transition), transform var(--transition);
-}
-.service-card:hover {
-  border-color: rgba(201,168,76,.4);
-  transform: translateY(-4px);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
-.service-card--featured {
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .92rem;
+  min-width: 480px;
+}
+
+.price-table thead tr {
   background: var(--dark-4);
-  border-color: var(--gold);
-  box-shadow: 0 0 0 1px var(--gold), var(--shadow);
+  border-bottom: 2px solid var(--gold);
 }
 
-.service-card__badge {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--gold);
-  color: var(--dark);
-  font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: .1em;
+.price-table th {
+  padding: 18px 24px;
+  text-align: left;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .12em;
   text-transform: uppercase;
-  padding: 4px 16px;
-  border-radius: 100px;
+  color: var(--text-muted);
 }
 
-.service-card__title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.3rem;
-  font-weight: 700;
+.price-table th.price-table__barber {
+  text-align: center;
+  width: 160px;
+}
+
+.barber-name {
+  display: inline-block;
+  color: var(--gold);
+  font-size: .85rem;
+  letter-spacing: .06em;
+}
+
+.price-table tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,.05);
+  transition: background var(--transition);
+}
+.price-table tbody tr:last-child { border-bottom: none; }
+.price-table tbody tr:nth-child(odd)  { background: var(--dark-3); }
+.price-table tbody tr:nth-child(even) { background: var(--dark-4); }
+.price-table tbody tr:hover { background: rgba(201,168,76,.06); }
+
+.price-table td {
+  padding: 16px 24px;
+  color: var(--text-muted);
+  vertical-align: middle;
+}
+
+.price-table td:first-child {
   color: var(--text);
-  margin-bottom: 24px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--border);
+  font-weight: 500;
 }
 
-.service-card--featured .service-card__title { color: var(--gold-light); }
+.price-table td:not(:first-child) { text-align: center; }
 
-.service-card__items { list-style: none; display: flex; flex-direction: column; gap: 0; }
-
-.service-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(255,255,255,.04);
-  font-size: .88rem;
-}
-.service-item:last-child { border-bottom: none; }
-
-.service-item__name { color: var(--text-muted); flex: 1; }
-.service-item__price {
+.price {
   font-weight: 700;
   color: var(--gold);
   white-space: nowrap;
   font-size: .95rem;
+}
+
+.price--na {
+  color: var(--mid);
+  font-weight: 400;
+  font-size: 1.1rem;
 }
 
 /* ─── Booking ─── */
@@ -823,7 +826,7 @@ body {
   .about__grid { grid-template-columns: 1fr; gap: 48px; }
   .about__image { aspect-ratio: 16/9; }
   .about__badge { bottom: 16px; right: 16px; }
-  .services__grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+  .price-table th.price-table__barber { width: 120px; }
   .booking__inner { grid-template-columns: 1fr; gap: 48px; }
   .location__info { gap: 32px; }
   .footer__inner { grid-template-columns: 1fr 1fr; }
