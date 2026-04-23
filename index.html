@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AG Barber – Κουρείο Αθήνα</title>
-  <meta name="description" content="AG Barber – Επαγγελματικό κουρείο στην Αθήνα. Κράτηση online, τιμοκατάλογος, κούρεμα & περιποίηση γενιών." />
+  <title>AG Barber – Κουρείο Κόρινθος</title>
+  <meta name="description" content="AG Barber – Επαγγελματικό κουρείο στην Κόρινθο. Δαμασκηνού 10. Κράτηση online, τιμοκατάλογος, κούρεμα & περιποίηση γενιών." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -20,6 +20,7 @@
         <li><a href="#about">Σχετικά</a></li>
         <li><a href="#services">Τιμές</a></li>
         <li><a href="#booking">Κράτηση</a></li>
+        <li><a href="#location">Τοποθεσία</a></li>
       </ul>
       <a href="#booking" class="btn btn--gold nav__cta">Κράτηση Online</a>
       <button class="nav__burger" id="burger" aria-label="Μενού">
@@ -30,6 +31,7 @@
       <a href="#about" class="nav__mobile-link">Σχετικά</a>
       <a href="#services" class="nav__mobile-link">Τιμές</a>
       <a href="#booking" class="nav__mobile-link">Κράτηση</a>
+      <a href="#location" class="nav__mobile-link">Τοποθεσία</a>
     </div>
   </nav>
 
@@ -37,7 +39,7 @@
   <section class="hero" id="home">
     <div class="hero__bg"></div>
     <div class="hero__content">
-      <p class="hero__eyebrow">Επαγγελματικό Κουρείο · Αθήνα</p>
+      <p class="hero__eyebrow">Επαγγελματικό Κουρείο · Κόρινθος</p>
       <h1 class="hero__title">Η τέχνη<br />του ξυραφιού.</h1>
       <p class="hero__sub">Κούρεμα, γένια & περιποίηση από έμπειρους barbers.<br />Κλείστε το ραντεβού σας online σε 30 δευτερόλεπτα.</p>
       <div class="hero__actions">
@@ -45,9 +47,7 @@
         <a href="#services" class="btn btn--outline">Δείτε Τιμές</a>
       </div>
     </div>
-    <div class="hero__scroll">
-      <span></span>
-    </div>
+    <div class="hero__scroll"><span></span></div>
   </section>
 
   <!-- ABOUT -->
@@ -68,22 +68,10 @@
           <p class="about__body">Το <strong>AG Barber</strong> είναι ένας χώρος όπου παράδοση και σύγχρονη αισθητική συναντώνται. Κάθε επίσκεψη είναι μια εμπειρία — από την υποδοχή μέχρι την τελευταία λεπτομέρεια στο φινίρισμα.</p>
           <p class="about__body">Οι barbers μας έχουν εκπαιδευτεί σε τεχνικές κλασικού ξυρίσματος αλλά και σύγχρονων στυλ, για να σας δίνουν πάντα το αποτέλεσμα που φανταστήκατε.</p>
           <ul class="about__list">
-            <li>
-              <span class="about__icon">✦</span>
-              <span>Κλασικό & σύγχρονο κούρεμα</span>
-            </li>
-            <li>
-              <span class="about__icon">✦</span>
-              <span>Περιποίηση & διαμόρφωση γενιών</span>
-            </li>
-            <li>
-              <span class="about__icon">✦</span>
-              <span>Premium προϊόντα περιποίησης</span>
-            </li>
-            <li>
-              <span class="about__icon">✦</span>
-              <span>Φιλική & χαλαρή ατμόσφαιρα</span>
-            </li>
+            <li><span class="about__icon">✦</span><span>Κλασικό & σύγχρονο κούρεμα</span></li>
+            <li><span class="about__icon">✦</span><span>Περιποίηση & διαμόρφωση γενιών</span></li>
+            <li><span class="about__icon">✦</span><span>Premium προϊόντα περιποίησης</span></li>
+            <li><span class="about__icon">✦</span><span>Φιλική & χαλαρή ατμόσφαιρα</span></li>
           </ul>
         </div>
       </div>
@@ -99,7 +87,6 @@
 
       <div class="services__grid">
 
-        <!-- Card 1 -->
         <div class="service-card">
           <div class="service-card__header">
             <h3 class="service-card__title">Κούρεμα</h3>
@@ -124,7 +111,6 @@
           </ul>
         </div>
 
-        <!-- Card 2 -->
         <div class="service-card service-card--featured">
           <div class="service-card__badge">Δημοφιλές</div>
           <div class="service-card__header">
@@ -150,7 +136,6 @@
           </ul>
         </div>
 
-        <!-- Card 3 -->
         <div class="service-card">
           <div class="service-card__header">
             <h3 class="service-card__title">Γένια & Extras</h3>
@@ -182,34 +167,65 @@
   <!-- BOOKING -->
   <section class="booking section" id="booking">
     <div class="container">
+      <p class="section__label center">Online Κράτηση</p>
+      <h2 class="section__title center">Κλείστε ραντεβού<br/>εύκολα & γρήγορα.</h2>
+      <p class="booking__intro center">Επιλέξτε την πλατφόρμα που προτιμάτε ή συμπληρώστε τη φόρμα παρακάτω.</p>
+
+      <!-- TWO BOOKING PLATFORM BUTTONS -->
+      <div class="booking__platforms">
+        <a href="https://agbarber.gr/online-booking/" target="_blank" rel="noopener" class="platform-card">
+          <span class="platform-card__icon">📅</span>
+          <div class="platform-card__text">
+            <strong>Κράτηση Online</strong>
+            <span>Επιλογή 1</span>
+          </div>
+          <span class="platform-card__arrow">→</span>
+        </a>
+        <a href="https://agbarber.gr/online-booking/" target="_blank" rel="noopener" class="platform-card">
+          <span class="platform-card__icon">📅</span>
+          <div class="platform-card__text">
+            <strong>Κράτηση Online</strong>
+            <span>Επιλογή 2</span>
+          </div>
+          <span class="platform-card__arrow">→</span>
+        </a>
+      </div>
+
+      <div class="booking__divider"><span>ή συμπληρώστε τη φόρμα</span></div>
+
       <div class="booking__inner">
         <div class="booking__info">
-          <p class="section__label">Online Κράτηση</p>
-          <h2 class="section__title">Κλείστε ραντεβού<br/>σε 30 δευτερόλεπτα.</h2>
-          <p class="booking__body">Επιλέξτε υπηρεσία, ημέρα και ώρα και επιβεβαιώστε τη κράτησή σας. Θα λάβετε επιβεβαίωση στο email ή SMS σας.</p>
           <div class="booking__hours">
             <p class="booking__hours-title">Ωράριο</p>
             <div class="booking__hours-grid">
-              <span>Δευτέρα – Παρασκευή</span><span>09:00 – 20:00</span>
-              <span>Σάββατο</span><span>09:00 – 18:00</span>
-              <span>Κυριακή</span><span>Κλειστά</span>
+              <span>Τρίτη – Παρασκευή</span><span>11:00 – 19:00</span>
+              <span>Σάββατο</span><span>11:00 – 19:00</span>
+              <span>Δευτέρα & Κυριακή</span><span>Κλειστά</span>
             </div>
           </div>
           <div class="booking__contact">
-            <a href="tel:+302101234567" class="booking__contact-link">
+            <a href="tel:+302741400498" class="booking__contact-link">
               <span class="booking__contact-icon">📞</span>
-              +30 210 123 4567
+              2741 400498
             </a>
-            <a href="https://instagram.com/agbarber" class="booking__contact-link">
-              <span class="booking__contact-icon">📷</span>
-              @agbarber
+            <a href="https://www.instagram.com/ag.barber__/" target="_blank" rel="noopener" class="booking__contact-link">
+              <span class="booking__contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </span>
+              @ag.barber__
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100063350192812" target="_blank" rel="noopener" class="booking__contact-link">
+              <span class="booking__contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </span>
+              AG Barber
             </a>
           </div>
         </div>
 
         <div class="booking__form-wrap">
           <form class="booking__form" id="bookingForm" novalidate>
-            <h3 class="booking__form-title">Νέα Κράτηση</h3>
+            <h3 class="booking__form-title">Φόρμα Κράτησης</h3>
 
             <div class="form__group">
               <label class="form__label" for="name">Ονοματεπώνυμο</label>
@@ -281,6 +297,55 @@
     </div>
   </section>
 
+  <!-- LOCATION -->
+  <section class="location section" id="location">
+    <div class="container">
+      <p class="section__label center">Τοποθεσία</p>
+      <h2 class="section__title center">Βρείτε μας.</h2>
+    </div>
+    <div class="location__map-wrap">
+      <iframe
+        class="location__map"
+        src="https://maps.google.com/maps?q=Δαμασκηνού+10,+Κόρινθος,+Greece&z=16&output=embed"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="AG Barber – Δαμασκηνού 10, Κόρινθος"
+      ></iframe>
+      <div class="location__card">
+        <div class="location__card-row">
+          <span class="location__card-icon">📍</span>
+          <div>
+            <strong>Διεύθυνση</strong>
+            <p>Δαμασκηνού 10, Κόρινθος</p>
+          </div>
+        </div>
+        <div class="location__card-row">
+          <span class="location__card-icon">📞</span>
+          <div>
+            <strong>Τηλέφωνο</strong>
+            <p><a href="tel:+302741400498">2741 400498</a></p>
+          </div>
+        </div>
+        <div class="location__card-row">
+          <span class="location__card-icon">🕐</span>
+          <div>
+            <strong>Ωράριο</strong>
+            <p>Τρίτη – Σάββατο: 11:00 – 19:00</p>
+            <p>Δευτέρα & Κυριακή: Κλειστά</p>
+          </div>
+        </div>
+        <a
+          href="https://www.google.com/maps/dir/?api=1&destination=Δαμασκηνού+10,+Κόρινθος,+Greece"
+          target="_blank"
+          rel="noopener"
+          class="btn btn--gold btn--full"
+          style="margin-top:8px"
+        >Οδηγίες Google Maps</a>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
@@ -288,18 +353,28 @@
         <div class="footer__brand">
           <a href="#" class="nav__logo">AG<span>BARBER</span></a>
           <p class="footer__tagline">Η τέχνη του ξυραφιού.</p>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/ag.barber__/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100063350192812" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
         </div>
         <div class="footer__links">
           <h4>Πλοήγηση</h4>
           <a href="#about">Σχετικά</a>
           <a href="#services">Τιμές</a>
           <a href="#booking">Κράτηση</a>
+          <a href="#location">Τοποθεσία</a>
         </div>
         <div class="footer__links">
           <h4>Επικοινωνία</h4>
-          <a href="tel:+302101234567">+30 210 123 4567</a>
-          <a href="mailto:info@agbarber.gr">info@agbarber.gr</a>
-          <a href="https://instagram.com/agbarber" target="_blank" rel="noopener">Instagram</a>
+          <a href="tel:+302741400498">2741 400498</a>
+          <a href="https://www.instagram.com/ag.barber__/" target="_blank" rel="noopener">@ag.barber__</a>
+          <a href="https://www.facebook.com/profile.php?id=100063350192812" target="_blank" rel="noopener">Facebook</a>
+          <span class="footer__address">Δαμασκηνού 10, Κόρινθος</span>
         </div>
       </div>
       <div class="footer__bottom">

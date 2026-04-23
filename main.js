@@ -16,7 +16,7 @@ mobileMenu.querySelectorAll('.nav__mobile-link').forEach(link => {
   link.addEventListener('click', () => mobileMenu.classList.remove('open'));
 });
 
-/* ── Date input: disable past dates & Sundays ── */
+/* ── Date input: disable past dates, Mondays & Sundays ── */
 const dateInput = document.getElementById('date');
 const timeSelect = document.getElementById('time');
 
@@ -26,24 +26,16 @@ const mm = String(today.getMonth() + 1).padStart(2, '0');
 const dd = String(today.getDate()).padStart(2, '0');
 dateInput.min = `${yyyy}-${mm}-${dd}`;
 
-const slots = {
-  weekday: [
-    '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
-    '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
-    '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',
-    '18:00', '18:30', '19:00', '19:30',
-  ],
-  saturday: [
-    '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
-    '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
-    '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',
-  ],
-};
+/* Open Tue–Sat 11:00–18:30 (last slot before closing at 19:00) */
+const timeSlots = [
+  '11:00', '11:30', '12:00', '12:30', '13:00', '13:30',
+  '14:00', '14:30', '15:00', '15:30', '16:00', '16:30',
+  '17:00', '17:30', '18:00', '18:30',
+];
 
-function buildTimeSlots(day) {
+function buildTimeSlots() {
   timeSelect.innerHTML = '<option value="" disabled selected>Επιλέξτε ώρα…</option>';
-  const list = day === 6 ? slots.saturday : slots.weekday;
-  list.forEach(t => {
+  timeSlots.forEach(t => {
     const opt = document.createElement('option');
     opt.value = t;
     opt.textContent = t;
@@ -53,17 +45,19 @@ function buildTimeSlots(day) {
 
 dateInput.addEventListener('change', () => {
   const selected = new Date(dateInput.value + 'T00:00:00');
-  const dayOfWeek = selected.getDay();
+  const day = selected.getDay();
 
-  if (dayOfWeek === 0) {
-    dateInput.setCustomValidity('Κλειστά Κυριακή. Επιλέξτε άλλη μέρα.');
+  /* 0 = Sunday, 1 = Monday — both closed */
+  if (day === 0 || day === 1) {
+    const label = day === 0 ? 'Κυριακή' : 'Δευτέρα';
+    dateInput.setCustomValidity(`Κλειστά ${label}. Επιλέξτε Τρίτη έως Σάββατο.`);
     dateInput.reportValidity();
-    timeSelect.innerHTML = '<option value="" disabled selected>Κλειστά Κυριακή</option>';
+    timeSelect.innerHTML = `<option value="" disabled selected>Κλειστά ${label}</option>`;
     return;
   }
 
   dateInput.setCustomValidity('');
-  buildTimeSlots(dayOfWeek);
+  buildTimeSlots();
 });
 
 /* ── Booking form submit ── */
@@ -85,9 +79,7 @@ form.addEventListener('submit', e => {
   setTimeout(() => {
     submitBtn.style.display = 'none';
     successMsg.classList.add('visible');
-    form.querySelectorAll('.form__input').forEach(el => {
-      el.disabled = true;
-    });
+    form.querySelectorAll('.form__input').forEach(el => { el.disabled = true; });
   }, 900);
 });
 
@@ -97,8 +89,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     const target = document.querySelector(a.getAttribute('href'));
     if (!target) return;
     e.preventDefault();
-    const offset = 80;
-    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+    const top = target.getBoundingClientRect().top + window.scrollY - 80;
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
