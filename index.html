@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AG Barber – Κουρείο Αθήνα</title>
+  <meta name="description" content="AG Barber – Επαγγελματικό κουρείο στην Αθήνα. Κράτηση online, τιμοκατάλογος, κούρεμα & περιποίηση γενιών." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">AG<span>BARBER</span></a>
+      <ul class="nav__links">
+        <li><a href="#about">Σχετικά</a></li>
+        <li><a href="#services">Τιμές</a></li>
+        <li><a href="#booking">Κράτηση</a></li>
+      </ul>
+      <a href="#booking" class="btn btn--gold nav__cta">Κράτηση Online</a>
+      <button class="nav__burger" id="burger" aria-label="Μενού">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#about" class="nav__mobile-link">Σχετικά</a>
+      <a href="#services" class="nav__mobile-link">Τιμές</a>
+      <a href="#booking" class="nav__mobile-link">Κράτηση</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Επαγγελματικό Κουρείο · Αθήνα</p>
+      <h1 class="hero__title">Η τέχνη<br />του ξυραφιού.</h1>
+      <p class="hero__sub">Κούρεμα, γένια & περιποίηση από έμπειρους barbers.<br />Κλείστε το ραντεβού σας online σε 30 δευτερόλεπτα.</p>
+      <div class="hero__actions">
+        <a href="#booking" class="btn btn--gold">Κλείστε Ραντεβού</a>
+        <a href="#services" class="btn btn--outline">Δείτε Τιμές</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__image-wrap">
+          <div class="about__image">
+            <div class="about__badge">
+              <span class="about__badge-num">10+</span>
+              <span class="about__badge-txt">Χρόνια<br/>Εμπειρίας</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__text">
+          <p class="section__label">Σχετικά με εμάς</p>
+          <h2 class="section__title">Περισσότερο από ένα κουρείο.</h2>
+          <p class="about__body">Το <strong>AG Barber</strong> είναι ένας χώρος όπου παράδοση και σύγχρονη αισθητική συναντώνται. Κάθε επίσκεψη είναι μια εμπειρία — από την υποδοχή μέχρι την τελευταία λεπτομέρεια στο φινίρισμα.</p>
+          <p class="about__body">Οι barbers μας έχουν εκπαιδευτεί σε τεχνικές κλασικού ξυρίσματος αλλά και σύγχρονων στυλ, για να σας δίνουν πάντα το αποτέλεσμα που φανταστήκατε.</p>
+          <ul class="about__list">
+            <li>
+              <span class="about__icon">✦</span>
+              <span>Κλασικό & σύγχρονο κούρεμα</span>
+            </li>
+            <li>
+              <span class="about__icon">✦</span>
+              <span>Περιποίηση & διαμόρφωση γενιών</span>
+            </li>
+            <li>
+              <span class="about__icon">✦</span>
+              <span>Premium προϊόντα περιποίησης</span>
+            </li>
+            <li>
+              <span class="about__icon">✦</span>
+              <span>Φιλική & χαλαρή ατμόσφαιρα</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES / PRICE TABLE -->
+  <section class="services section" id="services">
+    <div class="container">
+      <p class="section__label center">Τιμοκατάλογος</p>
+      <h2 class="section__title center">Απλές & ξεκάθαρες τιμές.</h2>
+      <p class="services__sub center">Χωρίς κρυφές χρεώσεις. Η ποιότητα μιλά από μόνη της.</p>
+
+      <div class="services__grid">
+
+        <!-- Card 1 -->
+        <div class="service-card">
+          <div class="service-card__header">
+            <h3 class="service-card__title">Κούρεμα</h3>
+          </div>
+          <ul class="service-card__items">
+            <li class="service-item">
+              <span class="service-item__name">Κούρεμα (ψαλίδι / μηχανή)</span>
+              <span class="service-item__price">€12</span>
+            </li>
+            <li class="service-item">
+              <span class="service-item__name">Κούρεμα + Styling</span>
+              <span class="service-item__price">€15</span>
+            </li>
+            <li class="service-item">
+              <span class="service-item__name">Παιδικό κούρεμα (έως 12 ετών)</span>
+              <span class="service-item__price">€8</span>
+            </li>
+            <li class="service-item">
+              <span class="service-item__name">Fade / Skin fade</span>
+              <span class="service-item__price">€15</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card service-card--featured">
+          <div class="service-card__badge">Δημοφιλές</div>
+          <div class="service-card__header">
+            <h3 class="service-card__title">Κούρεμα & Γένια</h3>
+          </div>
+          <ul class="service-card__items">
+            <li class="service-item">
+              <span class="service-item__name">Κούρεμα + Γένια</span>
+              <span class="service-item__price">€20</span>
+            </li>
+            <li class="service-item">
+              <span class="service-item__name">Fade + Γένια</span>
+              <span class="service-item__price">€22</span>
+            </li>
+            <li class="service-item">
+              <span class="service-item__name">Πλήρης περιποίηση (κούρεμα + γένια + hot towel)</span>
+              <span class="service-item__price">€28</span>
+            </li>
+            <li class="service-item">
+              <span class="service-item__name">VIP Package (all-in)</span>
+              <span class="service-item__price">€35</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card">
+          <div class="service-card__header">
+            <h3 class="service-card__title">Γένια & Extras</h3>
+          </div>
+          <ul class="service-card__items">
+            <li class="service-item">
+              <span class="service-item__name">Διαμόρφωση γενιών</span>
+              <span class="service-item__price">€8</span>
+            </li>
+            <li class="service-item">
+              <span class="service-item__name">Ξύρισμα με ξυράφι (straight razor)</span>
+              <span class="service-item__price">€10</span>
+            </li>
+            <li class="service-item">
+              <span class="service-item__name">Hot towel ξύρισμα</span>
+              <span class="service-item__price">€12</span>
+            </li>
+            <li class="service-item">
+              <span class="service-item__name">Βαφή γενιών / μαλλιών</span>
+              <span class="service-item__price">€15+</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="booking section" id="booking">
+    <div class="container">
+      <div class="booking__inner">
+        <div class="booking__info">
+          <p class="section__label">Online Κράτηση</p>
+          <h2 class="section__title">Κλείστε ραντεβού<br/>σε 30 δευτερόλεπτα.</h2>
+          <p class="booking__body">Επιλέξτε υπηρεσία, ημέρα και ώρα και επιβεβαιώστε τη κράτησή σας. Θα λάβετε επιβεβαίωση στο email ή SMS σας.</p>
+          <div class="booking__hours">
+            <p class="booking__hours-title">Ωράριο</p>
+            <div class="booking__hours-grid">
+              <span>Δευτέρα – Παρασκευή</span><span>09:00 – 20:00</span>
+              <span>Σάββατο</span><span>09:00 – 18:00</span>
+              <span>Κυριακή</span><span>Κλειστά</span>
+            </div>
+          </div>
+          <div class="booking__contact">
+            <a href="tel:+302101234567" class="booking__contact-link">
+              <span class="booking__contact-icon">📞</span>
+              +30 210 123 4567
+            </a>
+            <a href="https://instagram.com/agbarber" class="booking__contact-link">
+              <span class="booking__contact-icon">📷</span>
+              @agbarber
+            </a>
+          </div>
+        </div>
+
+        <div class="booking__form-wrap">
+          <form class="booking__form" id="bookingForm" novalidate>
+            <h3 class="booking__form-title">Νέα Κράτηση</h3>
+
+            <div class="form__group">
+              <label class="form__label" for="name">Ονοματεπώνυμο</label>
+              <input class="form__input" type="text" id="name" name="name" placeholder="π.χ. Γιώργος Παπάς" required />
+            </div>
+
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="phone">Τηλέφωνο</label>
+                <input class="form__input" type="tel" id="phone" name="phone" placeholder="69X XXX XXXX" required />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="email">Email</label>
+                <input class="form__input" type="email" id="email" name="email" placeholder="you@email.com" />
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="service">Υπηρεσία</label>
+              <select class="form__input form__select" id="service" name="service" required>
+                <option value="" disabled selected>Επιλέξτε υπηρεσία…</option>
+                <optgroup label="Κούρεμα">
+                  <option value="haircut">Κούρεμα (ψαλίδι / μηχανή) – €12</option>
+                  <option value="haircut-styling">Κούρεμα + Styling – €15</option>
+                  <option value="haircut-kids">Παιδικό κούρεμα – €8</option>
+                  <option value="fade">Fade / Skin fade – €15</option>
+                </optgroup>
+                <optgroup label="Κούρεμα & Γένια">
+                  <option value="hair-beard">Κούρεμα + Γένια – €20</option>
+                  <option value="fade-beard">Fade + Γένια – €22</option>
+                  <option value="full-grooming">Πλήρης περιποίηση – €28</option>
+                  <option value="vip">VIP Package – €35</option>
+                </optgroup>
+                <optgroup label="Γένια & Extras">
+                  <option value="beard">Διαμόρφωση γενιών – €8</option>
+                  <option value="razor">Ξύρισμα με ξυράφι – €10</option>
+                  <option value="hot-towel">Hot towel ξύρισμα – €12</option>
+                  <option value="color">Βαφή – €15+</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="date">Ημερομηνία</label>
+                <input class="form__input" type="date" id="date" name="date" required />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="time">Ώρα</label>
+                <select class="form__input form__select" id="time" name="time" required>
+                  <option value="" disabled selected>Επιλέξτε ώρα…</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="notes">Σημειώσεις (προαιρετικό)</label>
+              <textarea class="form__input form__textarea" id="notes" name="notes" placeholder="Κάτι που θέλετε να μας πείτε..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--gold btn--full">Επιβεβαίωση Κράτησης</button>
+
+            <div class="form__success" id="formSuccess">
+              <span>✓</span> Η κράτησή σας καταχωρήθηκε! Θα επικοινωνήσουμε μαζί σας σύντομα.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">AG<span>BARBER</span></a>
+          <p class="footer__tagline">Η τέχνη του ξυραφιού.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Πλοήγηση</h4>
+          <a href="#about">Σχετικά</a>
+          <a href="#services">Τιμές</a>
+          <a href="#booking">Κράτηση</a>
+        </div>
+        <div class="footer__links">
+          <h4>Επικοινωνία</h4>
+          <a href="tel:+302101234567">+30 210 123 4567</a>
+          <a href="mailto:info@agbarber.gr">info@agbarber.gr</a>
+          <a href="https://instagram.com/agbarber" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 AG Barber. Όλα τα δικαιώματα διατηρούνται.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
