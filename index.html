@@ -279,27 +279,27 @@
             </div>
 
             <div class="form__group">
+              <label class="form__label" for="barber">Barber</label>
+              <select class="form__input form__select" id="barber" name="barber" required>
+                <option value="" disabled selected>Επιλέξτε barber…</option>
+                <option value="Alex">Alex</option>
+                <option value="Francesco">Francesco</option>
+              </select>
+            </div>
+
+            <div class="form__group">
               <label class="form__label" for="service">Υπηρεσία</label>
               <select class="form__input form__select" id="service" name="service" required>
                 <option value="" disabled selected>Επιλέξτε υπηρεσία…</option>
-                <optgroup label="Κούρεμα">
-                  <option value="haircut">Κούρεμα (ψαλίδι / μηχανή) – €12</option>
-                  <option value="haircut-styling">Κούρεμα + Styling – €15</option>
-                  <option value="haircut-kids">Παιδικό κούρεμα – €8</option>
-                  <option value="fade">Fade / Skin fade – €15</option>
-                </optgroup>
-                <optgroup label="Κούρεμα & Γένια">
-                  <option value="hair-beard">Κούρεμα + Γένια – €20</option>
-                  <option value="fade-beard">Fade + Γένια – €22</option>
-                  <option value="full-grooming">Πλήρης περιποίηση – €28</option>
-                  <option value="vip">VIP Package – €35</option>
-                </optgroup>
-                <optgroup label="Γένια & Extras">
-                  <option value="beard">Διαμόρφωση γενιών – €8</option>
-                  <option value="razor">Ξύρισμα με ξυράφι – €10</option>
-                  <option value="hot-towel">Hot towel ξύρισμα – €12</option>
-                  <option value="color">Βαφή – €15+</option>
-                </optgroup>
+                <option value="Κούρεμα">Κούρεμα</option>
+                <option value="Κούρεμα Μόνο με Μηχανή">Κούρεμα Μόνο με Μηχανή</option>
+                <option value="Κούρεμα για Μακρύ Μήκος">Κούρεμα για Μακρύ Μήκος (Alex μόνο)</option>
+                <option value="Ξύρισμα με Μηχανή">Ξύρισμα με Μηχανή</option>
+                <option value="Περιποίηση για Μούσι">Περιποίηση για Μούσι</option>
+                <option value="Περιποίηση Γενειάδας">Περιποίηση Γενειάδας (Alex μόνο)</option>
+                <option value="Λούσιμο & Χτένισμα">Λούσιμο & Χτένισμα</option>
+                <option value="Καθαρισμός Αυχένα">Καθαρισμός Αυχένα</option>
+                <option value="Λούσιμο">Λούσιμο</option>
               </select>
             </div>
 
@@ -311,7 +311,7 @@
               <div class="form__group">
                 <label class="form__label" for="time">Ώρα</label>
                 <select class="form__input form__select" id="time" name="time" required>
-                  <option value="" disabled selected>Επιλέξτε ώρα…</option>
+                  <option value="" disabled selected>Πρώτα επιλέξτε ημέρα & barber</option>
                 </select>
               </div>
             </div>
@@ -419,6 +419,8 @@
     </div>
   </footer>
 
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
